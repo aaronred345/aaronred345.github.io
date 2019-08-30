@@ -69,7 +69,7 @@ function drawRed(x, y) {
     ctx.fill();
     ctx.closePath();
 
-    gameboard[y][x] = 0;
+    gameboard[y-1][x-1] = 0;
     playerTurn = !playerTurn;
 }
 
@@ -83,7 +83,7 @@ function drawBlue(x, y) {
     ctx.fill();
     ctx.closePath();
 
-    gameboard[y][x] = 2;
+    gameboard[y-1][x-1] = 2;
     playerTurn = !playerTurn;
 }
 
@@ -97,9 +97,9 @@ function on_canvas_click(ev) {
     console.log(x, y);
     console.log('===');
     if (playerTurn) {
-        drawRed(x, y);
+        drawRed(x + 1, y + 1);
     } else {
-        drawBlue(x, y);
+        drawBlue(x + 1, y + 1);
     }
     setTimeout(function () {
         resetGame(checkWinner());
