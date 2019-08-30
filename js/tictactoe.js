@@ -69,7 +69,7 @@ function drawRed(x, y) {
     ctx.fill();
     ctx.closePath();
 
-    gameboard[y][x] = 0;
+    gameboard[y-1][x-1] = 0;
     playerTurn = !playerTurn;
 }
 
@@ -86,7 +86,7 @@ function drawBlue(x, y) {
     ctx.fill();
     ctx.closePath();
 
-    gameboard[y][x] = 2;
+    gameboard[y-1][x-1] = 2;
     playerTurn = !playerTurn;
 }
 
