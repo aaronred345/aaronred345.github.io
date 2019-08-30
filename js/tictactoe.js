@@ -97,9 +97,9 @@ function on_canvas_click(ev) {
     console.log(x, y);
     console.log('===');
     if (playerTurn) {
-        drawRed(x + 1, y + 1);
+        drawRed(x, y);
     } else {
-        drawBlue(x + 1, y + 1);
+        drawBlue(x, y);
     }
     setTimeout(function () {
         resetGame(checkWinner());
