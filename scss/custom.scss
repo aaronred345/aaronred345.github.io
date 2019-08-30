@@ -1,0 +1,31 @@
+.navbar-brand {
+    color: #292929 !important;
+    font-size: 2.5em !important;
+}
+
+.vh-65 {
+    height: 65vh !important;
+}
+
+.h-85 {
+    height: 85% !important;
+}
+
+.mt-6 {
+    margin-top: 6rem !important;
+}
+
+canvas {
+    background-color: blue; 
+    width: 100%;
+    height: auto;
+}
+
+$border-width: 2.5px;
+$primary: #8b2323;
+$component-active-bg: rgba(28, 28, 28, .5);
+$body-bg: #171717;
+$jumbotron-bg: rgba(41, 41, 51, .4);
+$jumbotron-color: #8b2323;
+
+@import "../bootstrap/scss/bootstrap";
