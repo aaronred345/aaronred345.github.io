@@ -78,7 +78,7 @@ function drawBlue(x, y) {
     var _y = y * boardSize.sHeight;
 
     console.log(_x, _y);
-    console.log("========")
+    console.log("=====TEST===")
 
     ctx.beginPath();
     ctx.fillStyle = "#0000ff";
