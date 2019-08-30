@@ -69,7 +69,7 @@ function drawRed(x, y) {
     ctx.fill();
     ctx.closePath();
 
-    gameboard[y-1][x-1] = 0;
+    gameboard[y][x] = 0;
     playerTurn = !playerTurn;
 }
 
@@ -77,13 +77,16 @@ function drawBlue(x, y) {
     var _x = x * boardSize.sWidth;
     var _y = y * boardSize.sHeight;
 
+    console.log(_x, _y);
+    console.log("========")
+
     ctx.beginPath();
     ctx.fillStyle = "#0000ff";
     ctx.rect((_x - boardSize.sWidth) + 5, _y - boardSize.sHeight + 5, boardSize.sHeight - 10, boardSize.sWidth - 10);
     ctx.fill();
     ctx.closePath();
 
-    gameboard[y-1][x-1] = 2;
+    gameboard[y][x] = 2;
     playerTurn = !playerTurn;
 }
 
@@ -91,11 +94,11 @@ function on_canvas_click(ev) {
     console.log(ev.clientY, ev.clientX);
     var x = ev.offsetX;
     var y = ev.offsetY;
-    console.log(x, y);
+//    console.log(x, y);
     x = parseInt(x / (canvas.offsetHeight / 3));
     y = parseInt(y / (canvas.offsetWidth / 3));
-    console.log(x, y);
-    console.log('===');
+//    console.log(x, y);
+//    console.log('===');
     if (playerTurn) {
         drawRed(x + 1, y + 1);
     } else {
